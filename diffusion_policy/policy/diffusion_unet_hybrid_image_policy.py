@@ -44,7 +44,7 @@ class DiffusionUnetHybridImagePolicy(BaseImagePolicy):
         action_shape = shape_meta['action']['shape']
         assert len(action_shape) == 1
         action_dim = action_shape[0]
-        obs_shape_meta = shape_meta['obs']
+        obs_shape_meta = shape_meta['obs'] 
         obs_config = {
             'low_dim': [],
             'rgb': [],
@@ -58,7 +58,7 @@ class DiffusionUnetHybridImagePolicy(BaseImagePolicy):
 
             type = attr.get('type', 'low_dim')
             if type == 'rgb':
-                obs_config['rgb'].append(key)
+                obs_config['rgb'].append(key)# modify at this for optical flow added
             elif type == 'low_dim':
                 obs_config['low_dim'].append(key)
             else:
