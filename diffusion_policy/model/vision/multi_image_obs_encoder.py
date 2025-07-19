@@ -154,7 +154,7 @@ class MultiImageObsEncoder(ModuleAttrMixin):
         else:
             # run each rgb obs to independent models
             for key in self.rgb_keys:
-                img = obs_dict[key]
+                img = obs_dict[key] #modify here
                 if batch_size is None:
                     batch_size = img.shape[0]
                 else:
